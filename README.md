@@ -6,6 +6,7 @@ Most useful things in Python3 for scripts and leetcoding
 2. [Dictionaries](#dictionaries)
 3. [Strings](#strings)
 4. [Looping](#looping)
+5. [Built-in functions](#built-in-functions)
 
 ## Arrays
 
@@ -19,8 +20,22 @@ map = {}
 for n in nums:
   map[n] = map.get(n, 0) + 1
 ```
+### `(key in dict)` and `(key not in dict)`
+Returns boolean based on if `key` is in or not in `dict`.
+```python3
+map = {}
+map['j'] = 1
+('j' in map) # Returns True
+('k' not in map) # Returns True
+```
 
-### k
+### Tips
+
+#### You can use tuples as keys
+```python3
+memo = {}
+memo[(left+1, right)] = maxDiff(left+1, right)
+```
 
 ## Strings
 
@@ -37,6 +52,13 @@ Returns the character(s) starting from index `start`, ending at (but **not** inc
 "Helping"[:6:2] # Returns "Hli"
 ```
 
+### `String.count(c)`
+Returns and integer of the number of occurences of character `c`
+```python3
+"00010".count('1') # Returns 1
+"00010".count('0') # Returns 4
+```
+
 ### `String.isalnum()`
 Returns `True` if all the characters in the string are alphanumeric, (A-Za-z) or (0-9).
 ```python3
@@ -47,7 +69,7 @@ Returns `True` if all the characters in the string are alphanumeric, (A-Za-z) or
 ```
 
 ### `String.lower()`
-Returns version of the  string where all characters are lower case. 
+Returns version of the string where all characters are lower case. 
 ```python3
 "Hello world".lower() # Returns "hello world"
 "wat".lower() # Returns "wat"
@@ -74,3 +96,15 @@ Using `enumerate()`, we can also loop and have access to the index with 1 less l
 ```python3
 for i, item in enumerate(iterable):
 ```
+
+## Built-in Functions
+
+### `all()`
+
+### `any()`
+
+### `len()`
+
+### `max()`
+
+### `min()`
